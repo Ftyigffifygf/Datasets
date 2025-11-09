@@ -1,0 +1,53 @@
+milvus:
+  host: "localhost"
+  port: 19530
+
+collections:
+  medical_imaging:
+    dimension: 768
+    index_type: "IVF_FLAT"
+    metric_type: "L2"
+    nlist: 16384
+
+  genomics:
+    dimension: 512
+    index_type: "IVF_SQ8"
+    metric_type: "IP"
+    nlist: 8192
+
+  ehr_clinical:
+    dimension: 768
+    index_type: "HNSW"
+    metric_type: "COSINE"
+    M: 16
+    efConstruction: 200
+
+embedding_models:
+  imaging:
+    model: "microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"
+    dimension: 768
+    batch_size: 32
+
+  text_ehr:
+    model: "emilyalsentzer/Bio_ClinicalBERT"
+    dimension: 768
+    batch_size: 64
+
+  genomics:
+    model: "zhihan1996/DNABERT-2-117M"
+    dimension: 512
+    batch_size: 128
+
+storage:
+  minio:
+    endpoint: "localhost:9000"
+    access_key: "minioadmin"
+    secret_key: "minioadmin"
+    bucket: "medical-data"
+
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "medical_vectordb"
+    user: "postgres"
+    password: "postgres"

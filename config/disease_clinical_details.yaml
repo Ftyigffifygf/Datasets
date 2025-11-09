@@ -1,0 +1,448 @@
+# Comprehensive Clinical Details for Individual Diseases
+# Includes: Symptoms, Risk Factors, Biomarkers, Treatment, Prognosis
+
+respiratory:
+  pneumococcal_pneumonia:
+    full_name: "Streptococcus pneumoniae Pneumonia"
+    icd10: "J13"
+    symptoms:
+      - Sudden onset high fever (>102°F)
+      - Productive cough with rust-colored sputum
+      - Pleuritic chest pain
+      - Shortness of breath
+      - Rigors and chills
+    risk_factors:
+      - Age >65 or <2 years
+      - Chronic lung disease (COPD, asthma)
+      - Immunocompromised state
+      - Smoking
+      - Alcoholism
+      - Diabetes
+    diagnosis:
+      - Chest X-ray (lobar consolidation)
+      - Sputum culture
+      - Blood culture
+      - Urinary antigen test
+    treatment:
+      first_line: "Beta-lactam antibiotics (Amoxicillin, Ceftriaxone)"
+      alternative: "Fluoroquinolones (Levofloxacin)"
+      duration: "5-7 days"
+    prognosis:
+      mortality_rate: "5-7% (outpatient), 20-30% (ICU)"
+      recovery_time: "2-3 weeks"
+    prevention:
+      - PCV13 vaccine (children, immunocompromised)
+      - PPSV23 vaccine (adults >65)
+      - Smoking cessation
+    datasets:
+      - rsna_pneumonia
+      - mimic_cxr
+      - chexpert
+      - nih_chest_xray14
+
+  covid19_pneumonia:
+    full_name: "COVID-19 Pneumonia (SARS-CoV-2)"
+    icd10: "U07.1"
+    symptoms:
+      - Fever or chills
+      - Dry cough
+      - Shortness of breath
+      - Fatigue
+      - Loss of taste/smell
+      - Ground-glass opacities on CT
+    risk_factors:
+      - Age >60
+      - Obesity (BMI >30)
+      - Diabetes
+      - Cardiovascular disease
+      - Chronic kidney disease
+      - Immunosuppression
+    diagnosis:
+      - RT-PCR test
+      - Chest CT (ground-glass opacities)
+      - Chest X-ray
+      - D-dimer, CRP, Ferritin
+    treatment:
+      mild: "Supportive care, monitoring"
+      moderate: "Oxygen therapy, Dexamethasone"
+      severe: "Remdesivir, Tocilizumab, Mechanical ventilation"
+    prognosis:
+      mortality_rate: "1-2% (overall), 20-40% (ICU)"
+      long_covid: "10-30% develop persistent symptoms"
+    prevention:
+      - Vaccination (mRNA vaccines)
+      - Masking
+      - Social distancing
+    datasets:
+      - covidx
+      - covid_ct
+      - padchest
+
+  mdr_tuberculosis:
+    full_name: "Multi-Drug Resistant Tuberculosis"
+    icd10: "A15.0"
+    definition: "TB resistant to isoniazid and rifampicin"
+    symptoms:
+      - Persistent cough >3 weeks
+      - Hemoptysis
+      - Night sweats
+      - Weight loss
+      - Fever
+      - Cavitary lesions on imaging
+    risk_factors:
+      - Previous TB treatment
+      - HIV infection
+      - Contact with MDR-TB patient
+      - Healthcare worker
+      - Incarceration
+    diagnosis:
+      - Sputum culture with drug susceptibility testing
+      - GeneXpert MTB/RIF
+      - Chest X-ray (cavitation)
+    treatment:
+      duration: "18-24 months"
+      regimen: "Bedaquiline, Linezolid, Fluoroquinolones, Cycloserine"
+      monitoring: "Monthly sputum cultures, liver function tests"
+    prognosis:
+      cure_rate: "50-70%"
+      mortality_rate: "15-20%"
+    prevention:
+      - Infection control measures
+      - Contact tracing
+      - Preventive therapy for contacts
+    datasets:
+      - shenzhen_tb
+      - montgomery_tb
+
+cancer:
+  nodular_melanoma:
+    full_name: "Nodular Melanoma"
+    icd10: "C43"
+    prevalence: "15% of all melanomas"
+    characteristics:
+      - Vertical growth phase from onset
+      - Most aggressive melanoma type
+      - Rapid progression
+      - Often amelanotic (non-pigmented)
+      - Dome-shaped, raised lesion
+    risk_factors:
+      - Fair skin (Fitzpatrick I-II)
+      - History of sunburns
+      - Family history of melanoma
+      - Multiple atypical nevi
+      - Immunosuppression
+    diagnosis:
+      - Dermoscopy
+      - Excisional biopsy
+      - Breslow thickness measurement
+      - Sentinel lymph node biopsy
+    staging:
+      stage_1: "Localized, <2mm thick"
+      stage_2: "Localized, >2mm thick"
+      stage_3: "Regional lymph node involvement"
+      stage_4: "Distant metastases"
+    treatment:
+      stage_1_2: "Wide local excision"
+      stage_3: "Surgery + Adjuvant immunotherapy (Nivolumab, Pembrolizumab)"
+      stage_4: "Immunotherapy (PD-1 inhibitors) or Targeted therapy (BRAF/MEK inhibitors)"
+    prognosis:
+      five_year_survival:
+        stage_1: "95-99%"
+        stage_2: "65-90%"
+        stage_3: "40-70%"
+        stage_4: "15-25%"
+    biomarkers:
+      - BRAF V600E mutation (50%)
+      - NRAS mutation (20%)
+      - KIT mutation (rare)
+    datasets:
+      - isic
+      - ham10000
+
+  triple_negative_breast_cancer:
+    full_name: "Triple Negative Breast Cancer (TNBC)"
+    icd10: "C50"
+    definition: "ER-, PR-, HER2- breast cancer"
+    prevalence: "15% of all breast cancers"
+    characteristics:
+      - Most aggressive breast cancer subtype
+      - Higher grade at diagnosis
+      - Earlier age of onset
+      - Higher recurrence rate
+      - Brain and lung metastases common
+    risk_factors:
+      - BRCA1 mutation (70% are TNBC)
+      - African ancestry
+      - Younger age (<40)
+      - Premenopausal status
+    diagnosis:
+      - Mammography
+      - Breast MRI
+      - Core needle biopsy
+      - Immunohistochemistry (ER-, PR-, HER2-)
+      - BRCA testing
+    staging:
+      stage_1: "Tumor <2cm, no nodes"
+      stage_2: "Tumor 2-5cm or nodes"
+      stage_3: "Locally advanced"
+      stage_4: "Metastatic"
+    treatment:
+      early_stage: "Surgery + Chemotherapy (AC-T regimen)"
+      locally_advanced: "Neoadjuvant chemotherapy + Surgery + Radiation"
+      metastatic: "Chemotherapy, Immunotherapy (Pembrolizumab + chemo), PARP inhibitors (BRCA+)"
+    prognosis:
+      five_year_survival:
+        stage_1: "85-90%"
+        stage_2: "70-80%"
+        stage_3: "40-60%"
+        stage_4: "12-15%"
+      recurrence_risk: "High in first 3 years"
+    biomarkers:
+      - BRCA1/2 mutations
+      - PD-L1 expression
+      - Tumor infiltrating lymphocytes (TILs)
+    datasets:
+      - tcga_brca
+      - metabric
+      - tcga_brca_slides
+
+  glioblastoma:
+    full_name: "Glioblastoma Multiforme (GBM)"
+    icd10: "C71.9"
+    who_grade: "IV"
+    prevalence: "Most common malignant brain tumor in adults"
+    characteristics:
+      - Highly infiltrative
+      - Rapid growth
+      - Necrosis and hemorrhage
+      - Crosses corpus callosum (butterfly glioma)
+      - Pseudopalisading necrosis
+    risk_factors:
+      - Ionizing radiation
+      - Genetic syndromes (Li-Fraumeni, Neurofibromatosis)
+      - Age >60
+    diagnosis:
+      - Brain MRI with contrast (ring-enhancing lesion)
+      - Stereotactic biopsy
+      - IDH mutation status
+      - MGMT promoter methylation
+    molecular_subtypes:
+      idh_wildtype: "90% of GBM, worse prognosis"
+      idh_mutant: "10% of GBM, better prognosis"
+    treatment:
+      standard: "Maximal safe resection + Radiation (60 Gy) + Temozolomide"
+      adjuvant: "Temozolomide for 6 months"
+      recurrent: "Bevacizumab, Re-irradiation, Clinical trials"
+    prognosis:
+      median_survival: "15 months"
+      two_year_survival: "27%"
+      five_year_survival: "5-10%"
+      favorable_factors:
+        - MGMT methylation
+        - IDH mutation
+        - Younger age
+        - Gross total resection
+    biomarkers:
+      - IDH1/2 mutation
+      - MGMT promoter methylation
+      - EGFR amplification
+      - TERT promoter mutation
+      - 1p/19q codeletion (absent in GBM)
+    datasets:
+      - brats
+      - tcga_gbm
+
+neurological:
+  alzheimers_mci:
+    full_name: "Mild Cognitive Impairment due to Alzheimer's Disease"
+    icd10: "G31.84"
+    definition: "Cognitive decline greater than expected for age, but not dementia"
+    prevalence: "15-20% of adults >65"
+    symptoms:
+      - Memory problems
+      - Difficulty with complex tasks
+      - Mild language difficulties
+      - Daily function preserved
+    risk_factors:
+      - Age >65
+      - APOE ε4 allele
+      - Family history
+      - Cardiovascular disease
+      - Low education
+      - Head trauma
+    diagnosis:
+      - Cognitive testing (MoCA, MMSE)
+      - Brain MRI (hippocampal atrophy)
+      - PET scan (amyloid, tau, FDG)
+      - CSF biomarkers (Aβ42, tau, p-tau)
+    biomarkers:
+      - Amyloid-β plaques (PET or CSF)
+      - Tau tangles (PET or CSF)
+      - Hippocampal atrophy (MRI)
+      - FDG hypometabolism (PET)
+    treatment:
+      - Cholinesterase inhibitors (Donepezil)
+      - Lifestyle modifications
+      - Cognitive training
+      - Cardiovascular risk management
+    prognosis:
+      progression_to_dementia: "10-15% per year"
+      five_year_conversion: "50-70%"
+    prevention:
+      - Physical exercise
+      - Mediterranean diet
+      - Cognitive engagement
+      - Social activity
+    datasets:
+      - adni
+      - oasis
+
+cardiovascular:
+  atrial_fibrillation:
+    full_name: "Atrial Fibrillation"
+    icd10: "I48.91"
+    prevalence: "2-4% of adults, 10% of adults >80"
+    types:
+      paroxysmal: "Self-terminating, <7 days"
+      persistent: "Sustained >7 days"
+      long_standing_persistent: ">12 months"
+      permanent: "Accepted, no rhythm control"
+    symptoms:
+      - Palpitations
+      - Shortness of breath
+      - Fatigue
+      - Chest discomfort
+      - Dizziness
+      - Asymptomatic (30%)
+    risk_factors:
+      - Age >65
+      - Hypertension
+      - Heart failure
+      - Valvular heart disease
+      - Obesity
+      - Sleep apnea
+      - Alcohol use
+    diagnosis:
+      - 12-lead ECG (irregularly irregular rhythm, no P waves)
+      - Holter monitor
+      - Echocardiogram
+      - Thyroid function tests
+    complications:
+      stroke_risk: "5x increased risk"
+      heart_failure: "3x increased risk"
+      dementia: "2x increased risk"
+    treatment:
+      rate_control: "Beta-blockers, Calcium channel blockers"
+      rhythm_control: "Amiodarone, Flecainide, Cardioversion, Ablation"
+      anticoagulation: "DOACs (Apixaban, Rivaroxaban) or Warfarin"
+    risk_stratification:
+      chads2vasc:
+        score_0: "No anticoagulation"
+        score_1: "Consider anticoagulation"
+        score_2_plus: "Anticoagulation recommended"
+    prognosis:
+      mortality: "2x increased risk"
+      quality_of_life: "Significantly impaired"
+    datasets:
+      - afib
+      - mit_bih_arrhythmia
+      - ptb_xl
+      - cinc_challenge
+      - mimic_waveform
+
+  stemi:
+    full_name: "ST-Elevation Myocardial Infarction"
+    icd10: "I21.3"
+    definition: "Complete coronary artery occlusion with ST elevation"
+    pathophysiology: "Acute thrombotic occlusion of coronary artery"
+    symptoms:
+      - Severe crushing chest pain >20 minutes
+      - Radiation to left arm, jaw, back
+      - Diaphoresis
+      - Nausea/vomiting
+      - Shortness of breath
+      - Sense of impending doom
+    risk_factors:
+      - Smoking
+      - Hypertension
+      - Diabetes
+      - Hyperlipidemia
+      - Family history
+      - Age (men >45, women >55)
+    diagnosis:
+      - ECG (ST elevation ≥1mm in 2 contiguous leads)
+      - Cardiac biomarkers (Troponin I/T)
+      - Coronary angiography
+    treatment:
+      immediate: "Aspirin 325mg, Dual antiplatelet therapy"
+      reperfusion:
+        preferred: "Primary PCI (door-to-balloon <90 min)"
+        alternative: "Fibrinolysis (if PCI not available)"
+      adjunct: "Beta-blockers, ACE inhibitors, Statins"
+    complications:
+      - Cardiogenic shock (7%)
+      - Ventricular arrhythmias
+      - Heart failure
+      - Mechanical complications (rupture)
+      - Pericarditis
+    prognosis:
+      in_hospital_mortality: "5-10%"
+      one_year_mortality: "10-15%"
+      favorable_factors:
+        - Early reperfusion (<2 hours)
+        - Anterior MI (worse than inferior)
+        - Preserved ejection fraction
+    datasets:
+      - mimic_iv
+      - mimic_waveform
+      - ptb_xl
+
+diabetes:
+  proliferative_diabetic_retinopathy:
+    full_name: "Proliferative Diabetic Retinopathy"
+    icd10: "E11.359"
+    definition: "Advanced DR with neovascularization"
+    prevalence: "50% of diabetics with >20 years duration"
+    pathophysiology:
+      - Retinal ischemia
+      - VEGF upregulation
+      - Neovascularization
+      - Vitreous hemorrhage
+      - Tractional retinal detachment
+    symptoms:
+      - Sudden vision loss (vitreous hemorrhage)
+      - Floaters
+      - Flashing lights
+      - Progressive vision loss
+    risk_factors:
+      - Duration of diabetes >10 years
+      - Poor glycemic control (HbA1c >8%)
+      - Hypertension
+      - Hyperlipidemia
+      - Pregnancy
+      - Nephropathy
+    diagnosis:
+      - Dilated fundus examination
+      - Fundus photography
+      - Fluorescein angiography
+      - OCT (macular edema)
+    classification:
+      mild_pdr: "Neovascularization <1/3 disc area"
+      moderate_pdr: "Neovascularization >1/3 disc area"
+      high_risk_pdr: "NVD + vitreous hemorrhage"
+    treatment:
+      first_line: "Panretinal photocoagulation (PRP)"
+      alternative: "Anti-VEGF injections (Ranibizumab, Aflibercept)"
+      surgical: "Vitrectomy (for vitreous hemorrhage or retinal detachment)"
+    prognosis:
+      vision_loss_risk: "50% without treatment"
+      treatment_success: "90% stabilization with PRP"
+    prevention:
+      - Tight glycemic control (HbA1c <7%)
+      - Blood pressure control
+      - Annual eye exams
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+      - messidor
+      - oct_retinal

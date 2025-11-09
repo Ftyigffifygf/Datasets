@@ -1,0 +1,747 @@
+# Detailed mapping of specific diseases to datasets
+# Maps each disease subtype to available datasets
+
+# RESPIRATORY DISEASES
+pneumonia:
+  bacterial_pneumonia:
+    datasets:
+      - rsna_pneumonia
+      - mimic_cxr
+      - chexpert
+      - nih_chest_xray14
+    samples: 500000+
+    modalities: [X-ray, CT]
+
+  covid19_pneumonia:
+    datasets:
+      - covidx
+      - covid_ct
+      - padchest
+    samples: 35000+
+    modalities: [X-ray, CT]
+
+  viral_pneumonia:
+    datasets:
+      - rsna_pneumonia
+      - chexpert
+      - covidx
+    samples: 250000+
+    modalities: [X-ray]
+
+tuberculosis:
+  pulmonary_tb:
+    datasets:
+      - shenzhen_tb
+      - montgomery_tb
+      - nih_chest_xray14
+    samples: 1000+
+    modalities: [X-ray]
+
+  drug_resistant_tb:
+    datasets:
+      - shenzhen_tb
+    samples: 300+
+    modalities: [X-ray]
+
+lung_cancer:
+  adenocarcinoma:
+    datasets:
+      - luna16
+      - lidc_idri
+      - nsclc_radiomics
+      - tcga (LUAD)
+    samples: 2000+
+    modalities: [CT, Genomics]
+
+  squamous_cell_carcinoma:
+    datasets:
+      - lidc_idri
+      - nsclc_radiomics
+      - tcga (LUSC)
+    samples: 1500+
+    modalities: [CT, Genomics]
+
+  small_cell_lung_cancer:
+    datasets:
+      - tcga
+      - tcia
+    samples: 500+
+    modalities: [CT, Genomics]
+
+# CANCER - DETAILED SUBTYPES
+breast_cancer:
+  invasive_ductal_carcinoma:
+    datasets:
+      - tcga (BRCA)
+      - tcga_brca_slides
+      - metabric
+      - camelyon17
+      - breakhis
+    samples: 5000+
+    modalities: [Histopathology, Genomics, MRI]
+
+  invasive_lobular_carcinoma:
+    datasets:
+      - tcga (BRCA)
+      - metabric
+      - breakhis
+    samples: 1000+
+    modalities: [Histopathology, Genomics]
+
+  triple_negative:
+    datasets:
+      - tcga (BRCA)
+      - metabric
+    samples: 800+
+    modalities: [Genomics, Histopathology]
+
+  her2_positive:
+    datasets:
+      - tcga (BRCA)
+      - metabric
+    samples: 1200+
+    modalities: [Genomics, Histopathology]
+
+  ductal_carcinoma_in_situ:
+    datasets:
+      - tcga_brca_slides
+      - breakhis
+    samples: 500+
+    modalities: [Histopathology]
+
+  metastatic_breast_cancer:
+    datasets:
+      - camelyon16
+      - camelyon17
+      - pcam
+    samples: 328000+
+    modalities: [Histopathology]
+
+colorectal_cancer:
+  adenocarcinoma:
+    datasets:
+      - tcga (COAD, READ)
+      - colorectal_liver_metastases
+      - lizard
+    samples: 1500+
+    modalities: [Histopathology, Genomics, CT, MRI]
+
+  mucinous_adenocarcinoma:
+    datasets:
+      - tcga (COAD)
+    samples: 200+
+    modalities: [Genomics, Histopathology]
+
+  liver_metastases:
+    datasets:
+      - colorectal_liver_metastases
+    samples: 197
+    modalities: [CT, MRI]
+
+prostate_cancer:
+  acinar_adenocarcinoma:
+    datasets:
+      - tcga (PRAD)
+      - prostate_mri
+    samples: 500+
+    modalities: [MRI, Genomics]
+
+  gleason_grade_groups:
+    datasets:
+      - tcga (PRAD)
+      - prostate_mri
+    samples: 500+
+    modalities: [MRI, Histopathology]
+
+brain_tumors:
+  glioblastoma:
+    datasets:
+      - brats
+      - tcga (GBM)
+      - lgg_1p19q
+    samples: 1000+
+    modalities: [MRI, Genomics]
+
+  low_grade_glioma:
+    datasets:
+      - brats
+      - tcga (LGG)
+      - lgg_1p19q
+    samples: 800+
+    modalities: [MRI, Genomics]
+
+  oligodendroglioma:
+    datasets:
+      - lgg_1p19q
+      - tcga (LGG)
+    samples: 200+
+    modalities: [MRI, Genomics]
+
+  astrocytoma:
+    datasets:
+      - brats
+      - tcga (GBM, LGG)
+    samples: 1500+
+    modalities: [MRI, Genomics]
+
+skin_cancer:
+  melanoma:
+    superficial_spreading:
+      datasets:
+        - isic
+        - ham10000
+      samples: 30000+
+      modalities: [Dermoscopy]
+
+    nodular_melanoma:
+      datasets:
+        - isic
+        - ham10000
+      samples: 5000+
+      modalities: [Dermoscopy]
+
+    lentigo_maligna:
+      datasets:
+        - isic
+        - ham10000
+      samples: 3000+
+      modalities: [Dermoscopy]
+
+    acral_lentiginous:
+      datasets:
+        - isic
+        - ham10000
+      samples: 2000+
+      modalities: [Dermoscopy]
+
+  basal_cell_carcinoma:
+    datasets:
+      - ham10000
+      - isic
+    samples: 5000+
+    modalities: [Dermoscopy]
+
+  squamous_cell_carcinoma:
+    datasets:
+      - ham10000
+      - isic
+    samples: 3000+
+    modalities: [Dermoscopy]
+
+  melanocytic_nevus:
+    datasets:
+      - ham10000
+      - isic
+    samples: 40000+
+    modalities: [Dermoscopy]
+
+  seborrheic_keratosis:
+    datasets:
+      - ham10000
+      - isic
+    samples: 8000+
+    modalities: [Dermoscopy]
+
+# NEUROLOGICAL DISEASES
+alzheimers_disease:
+  mild_cognitive_impairment:
+    datasets:
+      - adni
+      - oasis
+    samples: 1000+
+    modalities: [MRI, PET, Clinical]
+
+  mild_alzheimers:
+    datasets:
+      - adni
+      - oasis
+    samples: 800+
+    modalities: [MRI, PET, Clinical]
+
+  moderate_alzheimers:
+    datasets:
+      - adni
+      - oasis
+    samples: 500+
+    modalities: [MRI, PET, Clinical]
+
+  severe_alzheimers:
+    datasets:
+      - adni
+      - oasis
+    samples: 300+
+    modalities: [MRI, PET, Clinical]
+
+parkinsons_disease:
+  tremor_dominant:
+    datasets:
+      - ppmi
+    samples: 600+
+    modalities: [MRI, DaTscan, Clinical]
+
+  postural_instability:
+    datasets:
+      - ppmi
+    samples: 500+
+    modalities: [MRI, DaTscan, Clinical]
+
+stroke:
+  ischemic_stroke:
+    datasets:
+      - isles
+    samples: 250+
+    modalities: [MRI, CT]
+
+  hemorrhagic_stroke:
+    datasets:
+      - isles
+    samples: 100+
+    modalities: [MRI, CT]
+
+multiple_sclerosis:
+  relapsing_remitting:
+    datasets:
+      - msseg
+    samples: 80+
+    modalities: [MRI]
+
+  progressive_ms:
+    datasets:
+      - msseg
+    samples: 20+
+    modalities: [MRI]
+
+epilepsy:
+  temporal_lobe_epilepsy:
+    datasets:
+      - epilepsy_ieeg
+    samples: 15+
+    modalities: [EEG]
+
+  generalized_epilepsy:
+    datasets:
+      - epilepsy_ieeg
+    samples: 9+
+    modalities: [EEG]
+
+autism_spectrum_disorder:
+  classic_autism:
+    datasets:
+      - abide
+    samples: 600+
+    modalities: [MRI, fMRI]
+
+  aspergers:
+    datasets:
+      - abide
+    samples: 300+
+    modalities: [MRI, fMRI]
+
+adhd:
+  inattentive_type:
+    datasets:
+      - adhd200
+    samples: 400+
+    modalities: [MRI, fMRI]
+
+  hyperactive_type:
+    datasets:
+      - adhd200
+    samples: 300+
+    modalities: [MRI, fMRI]
+
+  combined_type:
+    datasets:
+      - adhd200
+    samples: 273+
+    modalities: [MRI, fMRI]
+
+# CARDIOVASCULAR DISEASES
+coronary_artery_disease:
+  stemi:
+    datasets:
+      - mimic_iv
+      - mimic_waveform
+    samples: 5000+
+    modalities: [ECG, Clinical]
+
+  nstemi:
+    datasets:
+      - mimic_iv
+      - mimic_waveform
+    samples: 8000+
+    modalities: [ECG, Clinical]
+
+  stable_angina:
+    datasets:
+      - mimic_iv
+    samples: 3000+
+    modalities: [Clinical]
+
+heart_failure:
+  reduced_ejection_fraction:
+    datasets:
+      - cardiac_mri
+      - acdc
+      - mimic_iv
+    samples: 2000+
+    modalities: [MRI, Clinical]
+
+  preserved_ejection_fraction:
+    datasets:
+      - cardiac_mri
+      - mimic_iv
+    samples: 1500+
+    modalities: [MRI, Clinical]
+
+arrhythmias:
+  atrial_fibrillation:
+    datasets:
+      - afib
+      - mit_bih_arrhythmia
+      - ptb_xl
+      - cinc_challenge
+      - mimic_waveform
+    samples: 60000+
+    modalities: [ECG]
+
+  ventricular_tachycardia:
+    datasets:
+      - mit_bih_arrhythmia
+      - cinc_challenge
+      - mimic_waveform
+    samples: 5000+
+    modalities: [ECG]
+
+  ventricular_fibrillation:
+    datasets:
+      - mit_bih_arrhythmia
+      - mimic_waveform
+    samples: 1000+
+    modalities: [ECG]
+
+  av_block:
+    datasets:
+      - ptb_xl
+      - cinc_challenge
+    samples: 3000+
+    modalities: [ECG]
+
+cardiomyopathy:
+  dilated_cardiomyopathy:
+    datasets:
+      - cardiac_mri
+      - acdc
+    samples: 500+
+    modalities: [MRI]
+
+  hypertrophic_cardiomyopathy:
+    datasets:
+      - cardiac_mri
+      - acdc
+    samples: 400+
+    modalities: [MRI]
+
+myocardial_infarction:
+  anterior_mi:
+    datasets:
+      - ptb_xl
+      - sunnybrook
+    samples: 5000+
+    modalities: [ECG, MRI]
+
+  inferior_mi:
+    datasets:
+      - ptb_xl
+    samples: 4000+
+    modalities: [ECG]
+
+# DIABETES & COMPLICATIONS
+diabetes:
+  type_1_diabetes:
+    datasets:
+      - pima_diabetes
+      - mimic_iv
+    samples: 1000+
+    modalities: [Clinical]
+
+  type_2_diabetes:
+    datasets:
+      - pima_diabetes
+      - mimic_iv
+    samples: 50000+
+    modalities: [Clinical]
+
+diabetic_retinopathy:
+  no_dr:
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+      - messidor
+    samples: 40000+
+    modalities: [Fundus Photography]
+
+  mild_npdr:
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+      - messidor
+    samples: 15000+
+    modalities: [Fundus Photography]
+
+  moderate_npdr:
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+      - messidor
+    samples: 10000+
+    modalities: [Fundus Photography]
+
+  severe_npdr:
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+    samples: 5000+
+    modalities: [Fundus Photography]
+
+  proliferative_dr:
+    datasets:
+      - eyepacs
+      - diabetic_retinopathy
+      - messidor
+    samples: 8000+
+    modalities: [Fundus Photography]
+
+  diabetic_macular_edema:
+    datasets:
+      - oct_retinal
+      - eyepacs
+    samples: 10000+
+    modalities: [OCT, Fundus]
+
+# OPHTHALMOLOGY
+glaucoma:
+  open_angle_glaucoma:
+    datasets:
+      - refuge
+      - drishti_gs
+    samples: 800+
+    modalities: [Fundus Photography]
+
+  angle_closure_glaucoma:
+    datasets:
+      - refuge
+    samples: 200+
+    modalities: [Fundus Photography]
+
+age_related_macular_degeneration:
+  dry_amd:
+    datasets:
+      - oct_retinal
+    samples: 5000+
+    modalities: [OCT]
+
+  wet_amd:
+    datasets:
+      - oct_retinal
+    samples: 3000+
+    modalities: [OCT]
+
+retinal_diseases:
+  choroidal_neovascularization:
+    datasets:
+      - oct_retinal
+    samples: 8000+
+    modalities: [OCT]
+
+  drusen:
+    datasets:
+      - oct_retinal
+    samples: 10000+
+    modalities: [OCT]
+
+# ORTHOPEDIC
+osteoarthritis:
+  knee_oa:
+    datasets:
+      - oai
+    samples: 4000+
+    modalities: [X-ray, MRI]
+
+  hip_oa:
+    datasets:
+      - oai
+    samples: 2000+
+    modalities: [X-ray, MRI]
+
+fractures:
+  wrist_fracture:
+    datasets:
+      - mura
+    samples: 5000+
+    modalities: [X-ray]
+
+  elbow_fracture:
+    datasets:
+      - mura
+    samples: 4000+
+    modalities: [X-ray]
+
+  shoulder_fracture:
+    datasets:
+      - mura
+    samples: 6000+
+    modalities: [X-ray]
+
+  hand_fracture:
+    datasets:
+      - mura
+    samples: 5000+
+    modalities: [X-ray]
+
+spine_disorders:
+  herniated_disc:
+    datasets:
+      - spineweb
+    samples: 400+
+    modalities: [MRI, CT]
+
+  spinal_stenosis:
+    datasets:
+      - spineweb
+    samples: 300+
+    modalities: [MRI, CT]
+
+  scoliosis:
+    datasets:
+      - spineweb
+    samples: 200+
+    modalities: [X-ray]
+
+# KIDNEY & LIVER
+kidney_cancer:
+  clear_cell_rcc:
+    datasets:
+      - tcga_kirc
+      - kits
+    samples: 600+
+    modalities: [CT, Genomics]
+
+  papillary_rcc:
+    datasets:
+      - tcga_kirc
+    samples: 100+
+    modalities: [Genomics]
+
+liver_cancer:
+  hepatocellular_carcinoma:
+    datasets:
+      - tcga_lihc
+      - lits
+    samples: 500+
+    modalities: [CT, Genomics]
+
+  cholangiocarcinoma:
+    datasets:
+      - tcga_lihc
+    samples: 50+
+    modalities: [Genomics]
+
+# INFECTIOUS DISEASES
+covid19:
+  mild_covid:
+    datasets:
+      - covidx
+      - covid_ct
+    samples: 10000+
+    modalities: [X-ray, CT]
+
+  severe_covid:
+    datasets:
+      - covidx
+      - covid_ct
+    samples: 5000+
+    modalities: [X-ray, CT]
+
+malaria:
+  plasmodium_falciparum:
+    datasets:
+      - malaria
+    samples: 15000+
+    modalities: [Microscopy]
+
+  plasmodium_vivax:
+    datasets:
+      - malaria
+    samples: 5000+
+    modalities: [Microscopy]
+
+# MENTAL HEALTH
+schizophrenia:
+  paranoid_schizophrenia:
+    datasets:
+      - fbirn
+      - cobre
+      - bsnip
+    samples: 300+
+    modalities: [MRI, fMRI]
+
+  disorganized_schizophrenia:
+    datasets:
+      - bsnip
+    samples: 100+
+    modalities: [MRI, fMRI, EEG]
+
+psychosis_spectrum:
+  first_episode_psychosis:
+    datasets:
+      - bsnip
+    samples: 500+
+    modalities: [MRI, EEG, Clinical]
+
+  chronic_psychosis:
+    datasets:
+      - bsnip
+      - fbirn
+    samples: 800+
+    modalities: [MRI, fMRI]
+
+# PEDIATRIC
+congenital_heart_disease:
+  ventricular_septal_defect:
+    datasets:
+      - chop_chd
+    samples: 300+
+    modalities: [Ultrasound]
+
+  atrial_septal_defect:
+    datasets:
+      - chop_chd
+    samples: 250+
+    modalities: [Ultrasound]
+
+  tetralogy_of_fallot:
+    datasets:
+      - chop_chd
+    samples: 200+
+    modalities: [Ultrasound]
+
+bone_age_assessment:
+  normal_development:
+    datasets:
+      - rsna_bone_age
+      - rsna_pediatric_bone_age
+    samples: 10000+
+    modalities: [X-ray]
+
+  delayed_development:
+    datasets:
+      - rsna_bone_age
+    samples: 2000+
+    modalities: [X-ray]
+
+  advanced_development:
+    datasets:
+      - rsna_bone_age
+    samples: 2000+
+    modalities: [X-ray]

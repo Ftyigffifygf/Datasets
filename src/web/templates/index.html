@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Medical Vector Database{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Welcome to the Medical Vector Database</h2>
+    <p>A comprehensive system with individual disease-level granularity covering 607 diseases across 15 medical
+        specialties.</p>
+</div>
+
+<div class="stats">
+    <div class="stat-card">
+        <h3>{{ stats.total_diseases }}</h3>
+        <p>Individual Diseases</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.total_datasets }}</h3>
+        <p>Datasets</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.categories }}</h3>
+        <p>Categories</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.clinical_details }}</h3>
+        <p>Clinical Details</p>
+    </div>
+</div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search for a disease..." onkeyup="searchDiseases()">
+    <div id="search-results"></div>
+</div>
+
+<div class="card">
+    <h2>Featured Categories</h2>
+    <div class="disease-list">
+        <div class="disease-card" onclick="window.location.href='/diseases?category=respiratory'">
+            <h3>🫁 Respiratory</h3>
+            <p>Pneumonia, Tuberculosis, Lung Cancer</p>
+            <span class="category">100+ diseases</span>
+        </div>
+        <div class="disease-card" onclick="window.location.href='/diseases?category=cancer'">
+            <h3>🧬 Cancer</h3>
+            <p>Breast, Skin, Brain, Lung Cancer</p>
+            <span class="category">200+ subtypes</span>
+        </div>
+        <div class="disease-card" onclick="window.location.href='/diseases?category=neurological'">
+            <h3>🧠 Neurological</h3>
+            <p>Alzheimer's, Parkinson's, Stroke</p>
+            <span class="category">150+ diseases</span>
+        </div>
+        <div class="disease-card" onclick="window.location.href='/diseases?category=cardiovascular'">
+            <h3>🫀 Cardiovascular</h3>
+            <p>Arrhythmias, Heart Failure, MI</p>
+            <span class="category">100+ diseases</span>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Quick Links</h2>
+    <ul style="list-style: none; padding: 0;">
+        <li style="margin: 10px 0;"><a href="/diseases">Browse All Diseases</a></li>
+        <li style="margin: 10px 0;"><a href="/datasets">View All Datasets</a></li>
+        <li style="margin: 10px 0;"><a href="/categories">Explore Categories</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function searchDiseases() {
+        const query = document.getElementById('search').value;
+        if (query.length < 2) {
+            document.getElementById('search-results').innerHTML = '';
+            return;
+        }
+
+        fetch(`/search?q=${query}`)
+            .then(response => response.json())
+            .then(data => {
+                let html = '<div style="background: white; padding: 10px; border-radius: 8px; margin-top: 10px;">';
+                data.forEach(disease => {
+                    html += `<div style="padding: 10px; border-bottom: 1px solid #eee; cursor: pointer;" onclick="window.location.href='/disease/${disease.id}'">
+                    <strong>${disease.name}</strong> <span style="color: #666;">(${disease.category})</span>
+                </div>`;
+                });
+                html += '</div>';
+                document.getElementById('search-results').innerHTML = html;
+            });
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,753 @@
+# Comprehensive Disease Taxonomy - Detailed Classification
+# Each disease broken down into specific subtypes and variants
+
+respiratory:
+  pneumonia:
+    bacterial:
+      - Streptococcus pneumoniae (Pneumococcal)
+      - Staphylococcus aureus
+      - Haemophilus influenzae
+      - Mycoplasma pneumoniae (Atypical)
+      - Legionella pneumophila (Legionnaires)
+      - Klebsiella pneumoniae
+      - Pseudomonas aeruginosa
+    viral:
+      - COVID-19 (SARS-CoV-2)
+      - Influenza A/B
+      - Respiratory Syncytial Virus (RSV)
+      - Adenovirus
+      - Parainfluenza
+    fungal:
+      - Pneumocystis jirovecii (PCP)
+      - Aspergillus
+      - Histoplasma
+    aspiration:
+      - Chemical pneumonitis
+      - Foreign body aspiration
+
+  tuberculosis:
+    pulmonary:
+      - Primary TB
+      - Secondary TB (Reactivation)
+      - Miliary TB
+      - Cavitary TB
+    extrapulmonary:
+      - Lymph node TB
+      - Pleural TB
+      - Bone/Joint TB
+      - CNS TB (Meningitis)
+    drug_resistant:
+      - MDR-TB (Multi-drug resistant)
+      - XDR-TB (Extensively drug resistant)
+      - RR-TB (Rifampicin resistant)
+
+  copd:
+    - Chronic Bronchitis
+    - Emphysema
+    - Alpha-1 Antitrypsin Deficiency
+    - Bronchiectasis
+
+  asthma:
+    - Allergic Asthma
+    - Non-allergic Asthma
+    - Exercise-induced Asthma
+    - Occupational Asthma
+    - Aspirin-induced Asthma
+
+  lung_cancer:
+    non_small_cell:
+      - Adenocarcinoma
+      - Squamous Cell Carcinoma
+      - Large Cell Carcinoma
+    small_cell:
+      - Small Cell Lung Cancer (SCLC)
+      - Combined SCLC
+    other:
+      - Carcinoid Tumors
+      - Mesothelioma
+
+  interstitial_lung_disease:
+    - Idiopathic Pulmonary Fibrosis (IPF)
+    - Sarcoidosis
+    - Hypersensitivity Pneumonitis
+    - Cryptogenic Organizing Pneumonia
+
+  pleural_diseases:
+    - Pleural Effusion
+    - Pneumothorax
+    - Hemothorax
+    - Empyema
+    - Pleural Thickening
+
+cancer:
+  breast_cancer:
+    invasive:
+      - Invasive Ductal Carcinoma (IDC)
+      - Invasive Lobular Carcinoma (ILC)
+      - Tubular Carcinoma
+      - Medullary Carcinoma
+      - Mucinous Carcinoma
+      - Papillary Carcinoma
+    in_situ:
+      - Ductal Carcinoma In Situ (DCIS)
+      - Lobular Carcinoma In Situ (LCIS)
+    molecular_subtypes:
+      - Luminal A (ER+/PR+/HER2-)
+      - Luminal B (ER+/PR+/HER2+)
+      - HER2-enriched (ER-/PR-/HER2+)
+      - Triple Negative (ER-/PR-/HER2-)
+    special_types:
+      - Inflammatory Breast Cancer
+      - Paget's Disease of Nipple
+      - Phyllodes Tumor
+
+  lung_cancer:
+    adenocarcinoma:
+      - Acinar
+      - Papillary
+      - Micropapillary
+      - Solid
+      - Lepidic (formerly BAC)
+    squamous_cell:
+      - Keratinizing
+      - Non-keratinizing
+      - Basaloid
+    large_cell:
+      - Large Cell Neuroendocrine
+      - Combined Large Cell
+    small_cell:
+      - Pure SCLC
+      - Combined SCLC
+    other:
+      - Carcinoid (Typical/Atypical)
+      - Adenosquamous
+      - Sarcomatoid
+
+  colorectal_cancer:
+    by_location:
+      - Cecal Cancer
+      - Ascending Colon Cancer
+      - Transverse Colon Cancer
+      - Descending Colon Cancer
+      - Sigmoid Colon Cancer
+      - Rectal Cancer
+    by_histology:
+      - Adenocarcinoma (most common)
+      - Mucinous Adenocarcinoma
+      - Signet Ring Cell Carcinoma
+      - Squamous Cell Carcinoma
+      - Adenosquamous Carcinoma
+    molecular:
+      - MSI-High (Microsatellite Instability)
+      - MSS (Microsatellite Stable)
+      - KRAS mutant
+      - BRAF mutant
+
+  prostate_cancer:
+    types:
+      - Acinar Adenocarcinoma
+      - Ductal Adenocarcinoma
+      - Transitional Cell Carcinoma
+      - Squamous Cell Carcinoma
+      - Small Cell Carcinoma
+    gleason_score:
+      - Grade Group 1 (Gleason 6)
+      - Grade Group 2 (Gleason 3+4)
+      - Grade Group 3 (Gleason 4+3)
+      - Grade Group 4 (Gleason 8)
+      - Grade Group 5 (Gleason 9-10)
+
+  brain_tumors:
+    gliomas:
+      - Glioblastoma (Grade IV)
+      - Anaplastic Astrocytoma (Grade III)
+      - Diffuse Astrocytoma (Grade II)
+      - Pilocytic Astrocytoma (Grade I)
+      - Oligodendroglioma
+      - Ependymoma
+    meningiomas:
+      - Grade I (Benign)
+      - Grade II (Atypical)
+      - Grade III (Anaplastic)
+    other:
+      - Medulloblastoma
+      - Schwannoma
+      - Pituitary Adenoma
+      - Craniopharyngioma
+      - CNS Lymphoma
+
+  leukemia:
+    acute:
+      - Acute Lymphoblastic Leukemia (ALL)
+      - Acute Myeloid Leukemia (AML)
+      - Acute Promyelocytic Leukemia (APL)
+    chronic:
+      - Chronic Lymphocytic Leukemia (CLL)
+      - Chronic Myeloid Leukemia (CML)
+      - Hairy Cell Leukemia
+
+  lymphoma:
+    hodgkin:
+      - Nodular Sclerosis
+      - Mixed Cellularity
+      - Lymphocyte-rich
+      - Lymphocyte-depleted
+    non_hodgkin:
+      b_cell:
+        - Diffuse Large B-Cell Lymphoma (DLBCL)
+        - Follicular Lymphoma
+        - Marginal Zone Lymphoma
+        - Mantle Cell Lymphoma
+        - Burkitt Lymphoma
+      t_cell:
+        - Peripheral T-Cell Lymphoma
+        - Anaplastic Large Cell Lymphoma
+        - Mycosis Fungoides
+
+  skin_cancer:
+    melanoma:
+      - Superficial Spreading Melanoma
+      - Nodular Melanoma
+      - Lentigo Maligna Melanoma
+      - Acral Lentiginous Melanoma
+      - Amelanotic Melanoma
+      - Desmoplastic Melanoma
+    non_melanoma:
+      - Basal Cell Carcinoma (BCC)
+      - Squamous Cell Carcinoma (SCC)
+      - Merkel Cell Carcinoma
+      - Sebaceous Carcinoma
+      - Dermatofibrosarcoma Protuberans
+
+  liver_cancer:
+    - Hepatocellular Carcinoma (HCC)
+    - Intrahepatic Cholangiocarcinoma
+    - Hepatoblastoma
+    - Angiosarcoma
+    - Hemangiosarcoma
+
+  pancreatic_cancer:
+    - Pancreatic Ductal Adenocarcinoma
+    - Pancreatic Neuroendocrine Tumors (PNETs)
+    - Acinar Cell Carcinoma
+    - Intraductal Papillary Mucinous Neoplasm (IPMN)
+
+  kidney_cancer:
+    - Clear Cell Renal Cell Carcinoma
+    - Papillary Renal Cell Carcinoma
+    - Chromophobe Renal Cell Carcinoma
+    - Collecting Duct Carcinoma
+    - Wilms Tumor (Nephroblastoma)
+
+  bladder_cancer:
+    - Urothelial Carcinoma (Transitional Cell)
+    - Squamous Cell Carcinoma
+    - Adenocarcinoma
+    - Small Cell Carcinoma
+
+  ovarian_cancer:
+    epithelial:
+      - Serous Carcinoma (High-grade/Low-grade)
+      - Mucinous Carcinoma
+      - Endometrioid Carcinoma
+      - Clear Cell Carcinoma
+    germ_cell:
+      - Dysgerminoma
+      - Yolk Sac Tumor
+      - Teratoma
+    stromal:
+      - Granulosa Cell Tumor
+      - Sertoli-Leydig Cell Tumor
+
+neurological:
+  alzheimers_disease:
+    stages:
+      - Preclinical Alzheimer's
+      - Mild Cognitive Impairment (MCI)
+      - Mild Alzheimer's Dementia
+      - Moderate Alzheimer's Dementia
+      - Severe Alzheimer's Dementia
+    variants:
+      - Early-onset Alzheimer's (<65 years)
+      - Late-onset Alzheimer's (>65 years)
+      - Familial Alzheimer's Disease (FAD)
+
+  parkinsons_disease:
+    motor_subtypes:
+      - Tremor-dominant
+      - Postural Instability/Gait Difficulty (PIGD)
+      - Mixed
+    related_disorders:
+      - Multiple System Atrophy (MSA)
+      - Progressive Supranuclear Palsy (PSP)
+      - Corticobasal Degeneration
+      - Lewy Body Dementia
+
+  stroke:
+    ischemic:
+      - Thrombotic Stroke
+      - Embolic Stroke
+      - Lacunar Stroke
+      - Cryptogenic Stroke
+    hemorrhagic:
+      - Intracerebral Hemorrhage
+      - Subarachnoid Hemorrhage
+      - Subdural Hematoma
+      - Epidural Hematoma
+    transient:
+      - Transient Ischemic Attack (TIA)
+
+  epilepsy:
+    focal:
+      - Temporal Lobe Epilepsy
+      - Frontal Lobe Epilepsy
+      - Parietal Lobe Epilepsy
+      - Occipital Lobe Epilepsy
+    generalized:
+      - Absence Seizures
+      - Tonic-Clonic Seizures
+      - Myoclonic Seizures
+      - Atonic Seizures
+    syndromes:
+      - Juvenile Myoclonic Epilepsy
+      - Lennox-Gastaut Syndrome
+      - Dravet Syndrome
+      - West Syndrome
+
+  multiple_sclerosis:
+    - Relapsing-Remitting MS (RRMS)
+    - Secondary Progressive MS (SPMS)
+    - Primary Progressive MS (PPMS)
+    - Progressive-Relapsing MS (PRMS)
+    - Clinically Isolated Syndrome (CIS)
+
+  migraine:
+    - Migraine without Aura
+    - Migraine with Aura
+    - Chronic Migraine
+    - Hemiplegic Migraine
+    - Retinal Migraine
+    - Vestibular Migraine
+
+  dementia:
+    - Alzheimer's Disease
+    - Vascular Dementia
+    - Lewy Body Dementia
+    - Frontotemporal Dementia
+    - Mixed Dementia
+    - Creutzfeldt-Jakob Disease
+
+  motor_neuron_disease:
+    - Amyotrophic Lateral Sclerosis (ALS)
+    - Primary Lateral Sclerosis (PLS)
+    - Progressive Muscular Atrophy (PMA)
+    - Progressive Bulbar Palsy (PBP)
+
+  neuropathy:
+    - Diabetic Neuropathy
+    - Peripheral Neuropathy
+    - Autonomic Neuropathy
+    - Guillain-Barré Syndrome
+    - Charcot-Marie-Tooth Disease
+
+cardiovascular:
+  coronary_artery_disease:
+    - Stable Angina
+    - Unstable Angina
+    - Acute Myocardial Infarction (Heart Attack)
+      - STEMI (ST-Elevation MI)
+      - NSTEMI (Non-ST-Elevation MI)
+    - Silent Ischemia
+
+  heart_failure:
+    by_ejection_fraction:
+      - HFrEF (Reduced EF <40%)
+      - HFmrEF (Mid-range EF 40-49%)
+      - HFpEF (Preserved EF ≥50%)
+    by_side:
+      - Left-sided Heart Failure
+      - Right-sided Heart Failure
+      - Biventricular Failure
+    acute_vs_chronic:
+      - Acute Heart Failure
+      - Chronic Heart Failure
+
+  arrhythmias:
+    supraventricular:
+      - Atrial Fibrillation (AFib)
+      - Atrial Flutter
+      - Supraventricular Tachycardia (SVT)
+      - Wolff-Parkinson-White Syndrome
+      - AV Nodal Reentrant Tachycardia (AVNRT)
+    ventricular:
+      - Ventricular Tachycardia (VT)
+      - Ventricular Fibrillation (VFib)
+      - Premature Ventricular Contractions (PVCs)
+      - Long QT Syndrome
+      - Brugada Syndrome
+    bradycardia:
+      - Sinus Bradycardia
+      - First-degree AV Block
+      - Second-degree AV Block (Mobitz I/II)
+      - Third-degree AV Block (Complete)
+      - Sick Sinus Syndrome
+
+  cardiomyopathy:
+    - Dilated Cardiomyopathy (DCM)
+    - Hypertrophic Cardiomyopathy (HCM)
+    - Restrictive Cardiomyopathy
+    - Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)
+    - Takotsubo Cardiomyopathy (Stress-induced)
+
+  valvular_heart_disease:
+    aortic:
+      - Aortic Stenosis
+      - Aortic Regurgitation
+      - Bicuspid Aortic Valve
+    mitral:
+      - Mitral Stenosis
+      - Mitral Regurgitation
+      - Mitral Valve Prolapse
+    tricuspid:
+      - Tricuspid Stenosis
+      - Tricuspid Regurgitation
+    pulmonary:
+      - Pulmonary Stenosis
+      - Pulmonary Regurgitation
+
+  congenital_heart_disease:
+    - Atrial Septal Defect (ASD)
+    - Ventricular Septal Defect (VSD)
+    - Patent Ductus Arteriosus (PDA)
+    - Tetralogy of Fallot
+    - Coarctation of Aorta
+    - Transposition of Great Arteries
+
+  peripheral_vascular_disease:
+    - Peripheral Artery Disease (PAD)
+    - Deep Vein Thrombosis (DVT)
+    - Pulmonary Embolism (PE)
+    - Varicose Veins
+    - Chronic Venous Insufficiency
+
+  hypertension:
+    - Essential (Primary) Hypertension
+    - Secondary Hypertension
+    - Malignant Hypertension
+    - White Coat Hypertension
+    - Masked Hypertension
+
+dermatology:
+  skin_cancer:
+    melanoma:
+      by_type:
+        - Superficial Spreading Melanoma (70%)
+        - Nodular Melanoma (15%)
+        - Lentigo Maligna Melanoma (10%)
+        - Acral Lentiginous Melanoma (5%)
+        - Amelanotic Melanoma
+        - Desmoplastic Melanoma
+      by_stage:
+        - Stage 0 (Melanoma in situ)
+        - Stage I (Localized, thin)
+        - Stage II (Localized, thick)
+        - Stage III (Regional spread)
+        - Stage IV (Distant metastases)
+    basal_cell_carcinoma:
+      - Nodular BCC
+      - Superficial BCC
+      - Morpheaform (Sclerosing) BCC
+      - Pigmented BCC
+      - Infiltrative BCC
+    squamous_cell_carcinoma:
+      - In Situ (Bowen's Disease)
+      - Invasive SCC
+      - Keratoacanthoma
+      - Verrucous Carcinoma
+    rare:
+      - Merkel Cell Carcinoma
+      - Sebaceous Carcinoma
+      - Dermatofibrosarcoma Protuberans
+      - Kaposi Sarcoma
+
+  benign_lesions:
+    - Melanocytic Nevus (Mole)
+    - Seborrheic Keratosis
+    - Dermatofibroma
+    - Hemangioma
+    - Lipoma
+    - Actinic Keratosis (Precancerous)
+
+  inflammatory_conditions:
+    - Psoriasis (Plaque, Guttate, Inverse, Pustular)
+    - Eczema (Atopic Dermatitis)
+    - Contact Dermatitis
+    - Seborrheic Dermatitis
+    - Rosacea
+    - Lichen Planus
+
+  infections:
+    - Cellulitis
+    - Impetigo
+    - Folliculitis
+    - Fungal Infections (Tinea)
+    - Herpes Simplex
+    - Shingles (Herpes Zoster)
+
+diabetes:
+  type_1_diabetes:
+    - Autoimmune Type 1
+    - Idiopathic Type 1
+    - Latent Autoimmune Diabetes in Adults (LADA)
+
+  type_2_diabetes:
+    stages:
+      - Prediabetes (Impaired Glucose Tolerance)
+      - Early Type 2 Diabetes
+      - Established Type 2 Diabetes
+      - Advanced Type 2 Diabetes
+
+  gestational_diabetes:
+    - Class A1 (Diet-controlled)
+    - Class A2 (Medication-required)
+
+  other_types:
+    - Maturity-Onset Diabetes of the Young (MODY)
+    - Neonatal Diabetes
+    - Secondary Diabetes (Drug-induced, Pancreatitis)
+
+  complications:
+    microvascular:
+      - Diabetic Retinopathy
+        - Non-proliferative (Mild, Moderate, Severe)
+        - Proliferative
+        - Diabetic Macular Edema
+      - Diabetic Nephropathy
+        - Stage 1-5 Chronic Kidney Disease
+      - Diabetic Neuropathy
+        - Peripheral Neuropathy
+        - Autonomic Neuropathy
+        - Focal Neuropathy
+    macrovascular:
+      - Coronary Artery Disease
+      - Peripheral Artery Disease
+      - Cerebrovascular Disease
+    other:
+      - Diabetic Foot Ulcers
+      - Diabetic Ketoacidosis (DKA)
+      - Hyperosmolar Hyperglycemic State (HHS)
+
+infectious_diseases:
+  viral:
+    respiratory:
+      - COVID-19 (SARS-CoV-2)
+      - Influenza A/B
+      - RSV (Respiratory Syncytial Virus)
+      - Rhinovirus (Common Cold)
+      - Adenovirus
+    hepatitis:
+      - Hepatitis A
+      - Hepatitis B
+      - Hepatitis C
+      - Hepatitis D
+      - Hepatitis E
+    hiv:
+      - Acute HIV Infection
+      - Chronic HIV Infection
+      - AIDS (CD4 <200)
+    herpes:
+      - HSV-1 (Oral Herpes)
+      - HSV-2 (Genital Herpes)
+      - Varicella-Zoster (Chickenpox/Shingles)
+      - Epstein-Barr Virus (Mononucleosis)
+      - Cytomegalovirus (CMV)
+
+  bacterial:
+    - Tuberculosis (Mycobacterium tuberculosis)
+    - Streptococcal Infections (Group A, B)
+    - Staphylococcal Infections (MRSA, MSSA)
+    - E. coli Infections
+    - Salmonella
+    - Clostridium difficile (C. diff)
+    - Lyme Disease (Borrelia)
+    - Syphilis (Treponema pallidum)
+
+  parasitic:
+    - Malaria (P. falciparum, vivax, ovale, malariae)
+    - Toxoplasmosis
+    - Giardiasis
+    - Cryptosporidiosis
+    - Leishmaniasis
+
+  fungal:
+    - Candidiasis (Thrush, Yeast Infection)
+    - Aspergillosis
+    - Cryptococcosis
+    - Histoplasmosis
+    - Coccidioidomycosis
+
+mental_health:
+  mood_disorders:
+    depression:
+      - Major Depressive Disorder (MDD)
+      - Persistent Depressive Disorder (Dysthymia)
+      - Seasonal Affective Disorder (SAD)
+      - Postpartum Depression
+      - Psychotic Depression
+    bipolar:
+      - Bipolar I Disorder
+      - Bipolar II Disorder
+      - Cyclothymic Disorder
+      - Rapid Cycling Bipolar
+
+  anxiety_disorders:
+    - Generalized Anxiety Disorder (GAD)
+    - Panic Disorder
+    - Social Anxiety Disorder
+    - Specific Phobias
+    - Agoraphobia
+    - Separation Anxiety Disorder
+
+  psychotic_disorders:
+    schizophrenia:
+      - Paranoid Schizophrenia
+      - Disorganized Schizophrenia
+      - Catatonic Schizophrenia
+      - Undifferentiated Schizophrenia
+      - Residual Schizophrenia
+    other:
+      - Schizoaffective Disorder
+      - Schizophreniform Disorder
+      - Brief Psychotic Disorder
+      - Delusional Disorder
+
+  neurodevelopmental:
+    autism_spectrum:
+      - Autism (Classic)
+      - Asperger's Syndrome
+      - Pervasive Developmental Disorder (PDD-NOS)
+    adhd:
+      - ADHD Predominantly Inattentive
+      - ADHD Predominantly Hyperactive-Impulsive
+      - ADHD Combined Type
+
+  trauma_related:
+    - Post-Traumatic Stress Disorder (PTSD)
+    - Acute Stress Disorder
+    - Adjustment Disorders
+
+  eating_disorders:
+    - Anorexia Nervosa
+    - Bulimia Nervosa
+    - Binge Eating Disorder
+    - Avoidant/Restrictive Food Intake Disorder (ARFID)
+
+  personality_disorders:
+    cluster_a:
+      - Paranoid Personality Disorder
+      - Schizoid Personality Disorder
+      - Schizotypal Personality Disorder
+    cluster_b:
+      - Antisocial Personality Disorder
+      - Borderline Personality Disorder
+      - Histrionic Personality Disorder
+      - Narcissistic Personality Disorder
+    cluster_c:
+      - Avoidant Personality Disorder
+      - Dependent Personality Disorder
+      - Obsessive-Compulsive Personality Disorder
+
+orthopedic:
+  fractures:
+    by_type:
+      - Simple (Closed) Fracture
+      - Compound (Open) Fracture
+      - Comminuted Fracture
+      - Greenstick Fracture
+      - Stress Fracture
+      - Pathological Fracture
+    by_location:
+      - Hip Fracture (Femoral Neck, Intertrochanteric)
+      - Vertebral Compression Fracture
+      - Wrist Fracture (Colles', Scaphoid)
+      - Ankle Fracture
+      - Clavicle Fracture
+
+  arthritis:
+    osteoarthritis:
+      - Knee Osteoarthritis
+      - Hip Osteoarthritis
+      - Hand Osteoarthritis
+      - Spine Osteoarthritis
+    rheumatoid_arthritis:
+      - Seropositive RA
+      - Seronegative RA
+      - Juvenile Idiopathic Arthritis
+    other:
+      - Psoriatic Arthritis
+      - Ankylosing Spondylitis
+      - Gout
+      - Pseudogout (CPPD)
+
+  spine_disorders:
+    - Herniated Disc (Cervical, Thoracic, Lumbar)
+    - Spinal Stenosis
+    - Spondylolisthesis
+    - Scoliosis (Idiopathic, Congenital, Neuromuscular)
+    - Kyphosis
+    - Degenerative Disc Disease
+
+  soft_tissue:
+    - Rotator Cuff Tear
+    - ACL Tear
+    - Meniscus Tear
+    - Tennis Elbow (Lateral Epicondylitis)
+    - Golfer's Elbow (Medial Epicondylitis)
+    - Plantar Fasciitis
+
+  bone_diseases:
+    - Osteoporosis
+    - Osteopenia
+    - Paget's Disease
+    - Osteomyelitis
+    - Osteonecrosis (Avascular Necrosis)
+
+ophthalmology:
+  retinal_diseases:
+    diabetic_retinopathy:
+      - Non-proliferative DR (Mild, Moderate, Severe)
+      - Proliferative DR
+      - Diabetic Macular Edema
+    age_related_macular_degeneration:
+      - Dry AMD (Geographic Atrophy)
+      - Wet AMD (Neovascular)
+    other:
+      - Retinal Detachment
+      - Retinal Vein Occlusion
+      - Retinal Artery Occlusion
+      - Retinitis Pigmentosa
+
+  glaucoma:
+    - Primary Open-Angle Glaucoma
+    - Angle-Closure Glaucoma
+    - Normal-Tension Glaucoma
+    - Secondary Glaucoma
+    - Congenital Glaucoma
+
+  cataract:
+    - Nuclear Cataract
+    - Cortical Cataract
+    - Posterior Subcapsular Cataract
+    - Congenital Cataract
+
+  corneal_diseases:
+    - Keratoconus
+    - Corneal Ulcer
+    - Corneal Dystrophy
+    - Fuchs' Dystrophy
+
+  refractive_errors:
+    - Myopia (Nearsightedness)
+    - Hyperopia (Farsightedness)
+    - Astigmatism
+    - Presbyopia

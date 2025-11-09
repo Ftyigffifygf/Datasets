@@ -1,0 +1,64 @@
+imaging:
+  tcia:
+    url: "https://www.cancerimagingarchive.net"
+    size_tb: 100
+    modalities: ["CT", "MRI", "PET"]
+    api_key_required: false
+
+  stanford_aimi:
+    url: "https://aimi.stanford.edu/shared-datasets"
+    size_tb: 50
+    modalities: ["X-ray", "CT", "MRI"]
+    api_key_required: true
+
+  uk_biobank:
+    url: "https://www.ukbiobank.ac.uk"
+    size_tb: 50
+    modalities: ["MRI", "CT", "Ultrasound"]
+    api_key_required: true
+    access_type: "institutional"
+
+  openneuro:
+    url: "https://openneuro.org"
+    size_tb: 30
+    modalities: ["MRI", "fMRI", "EEG"]
+    api_key_required: false
+
+genomics:
+  thousand_genomes:
+    url: "https://www.internationalgenome.org"
+    size_tb: 200
+    data_types: ["WGS", "WES"]
+    cloud_mirrors:
+      - "s3://1000genomes"
+      - "gs://genomics-public-data/1000-genomes"
+
+  gdc:
+    url: "https://gdc.cancer.gov"
+    size_tb: 100
+    data_types: ["WGS", "RNA-Seq", "Methylation"]
+    api_endpoint: "https://api.gdc.cancer.gov"
+
+  geo_sra:
+    url: "https://www.ncbi.nlm.nih.gov/geo"
+    size_tb: 100
+    data_types: ["Gene Expression", "RNA-Seq", "ChIP-Seq"]
+
+ehr:
+  mimic:
+    url: "https://physionet.org/content/mimiciv"
+    size_tb: 5
+    data_types: ["vitals", "labs", "notes", "medications"]
+    credentialed_access: true
+
+  eicu:
+    url: "https://physionet.org/content/eicu-crd"
+    size_tb: 3
+    data_types: ["vitals", "labs", "notes"]
+    credentialed_access: true
+
+  all_of_us:
+    url: "https://www.researchallofus.org"
+    size_tb: 50
+    data_types: ["EHR", "genomics", "wearables", "surveys"]
+    access_type: "institutional"

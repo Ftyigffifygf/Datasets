@@ -1,0 +1,602 @@
+respiratory:
+  nih_chest_xray14:
+    url: "https://nihcc.app.box.com/v/ChestXray-NIHCC"
+    size_gb: 45
+    conditions:
+      [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Effusion",
+        "Infiltration",
+        "Mass",
+        "Nodule",
+        "Pneumonia",
+        "Pneumothorax",
+        "Consolidation",
+        "Edema",
+        "Emphysema",
+        "Fibrosis",
+        "Pleural_Thickening",
+        "Hernia",
+      ]
+    modality: "X-ray"
+    samples: 112120
+
+  chexpert:
+    url: "https://stanfordmlgroup.github.io/competitions/chexpert/"
+    size_gb: 439
+    conditions:
+      [
+        "Atelectasis",
+        "Cardiomegaly",
+        "Consolidation",
+        "Edema",
+        "Pleural Effusion",
+      ]
+    modality: "X-ray"
+    samples: 224316
+    uncertainty_labels: true
+
+  covidx:
+    url: "https://github.com/lindawangg/COVID-Net"
+    size_gb: 5
+    conditions: ["COVID-19", "Pneumonia", "Normal"]
+    modality: ["X-ray", "CT"]
+    samples: 30000
+
+  rsna_pneumonia:
+    url: "https://www.kaggle.com/c/rsna-pneumonia-detection-challenge"
+    size_gb: 10
+    conditions: ["Pneumonia"]
+    modality: "X-ray"
+    samples: 30000
+
+  mimic_cxr:
+    url: "https://physionet.org/content/mimic-cxr/"
+    size_gb: 4700
+    conditions: ["14 thoracic pathologies"]
+    modality: "X-ray"
+    samples: 377110
+    reports: 227835
+    access: "credentialed"
+
+  padchest:
+    url: "http://bimcv.cipf.es/bimcv-projects/padchest/"
+    size_gb: 1000
+    conditions: ["174 radiological findings"]
+    modality: "X-ray"
+    samples: 160000
+
+  luna16:
+    url: "https://luna16.grand-challenge.org"
+    size_gb: 124
+    conditions: ["Lung Nodules"]
+    modality: "CT"
+    samples: 888
+
+  lidc_idri:
+    url: "https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI"
+    size_gb: 124
+    conditions: ["Lung Cancer"]
+    modality: "CT"
+    samples: 1018
+
+  shenzhen_tb:
+    url: "https://lhncbc.nlm.nih.gov/LHC-publications/pubs/TuberculosisChestXrayImageDataSets.html"
+    size_gb: 0.5
+    conditions: ["Tuberculosis"]
+    modality: "X-ray"
+    samples: 662
+
+  covid_ct:
+    url: "https://github.com/UCSD-AI4H/COVID-CT"
+    size_gb: 2
+    conditions: ["COVID-19"]
+    modality: "CT"
+    samples: 746
+
+neurological:
+  brats:
+    url: "https://www.med.upenn.edu/cbica/brats2023/"
+    size_gb: 100
+    conditions: ["Glioblastoma", "Lower Grade Glioma"]
+    modality: "MRI"
+    sequences: ["T1", "T1ce", "T2", "FLAIR"]
+    samples: 2000
+
+  oasis:
+    url: "https://www.oasis-brains.org"
+    size_gb: 50
+    conditions: ["Alzheimer's Disease", "Dementia"]
+    modality: "MRI"
+    samples: 1000
+    longitudinal: true
+
+  adni:
+    url: "https://adni.loni.usc.edu"
+    size_gb: 200
+    conditions: ["Alzheimer's Disease"]
+    modality: ["MRI", "PET", "Clinical"]
+    samples: 2000
+    access: "credentialed"
+
+  ppmi:
+    url: "https://www.ppmi-info.org"
+    size_gb: 150
+    conditions: ["Parkinson's Disease"]
+    modality: ["MRI", "DaTscan", "Clinical"]
+    samples: 1500
+    access: "credentialed"
+
+  abide:
+    url: "http://fcon_1000.projects.nitrc.org/indi/abide/"
+    size_gb: 100
+    conditions: ["Autism Spectrum Disorder"]
+    modality: ["MRI", "fMRI"]
+    samples: 1112
+
+  adhd200:
+    url: "http://fcon_1000.projects.nitrc.org/indi/adhd200/"
+    size_gb: 80
+    conditions: ["ADHD"]
+    modality: ["MRI", "fMRI"]
+    samples: 973
+
+  hcp:
+    url: "https://www.humanconnectome.org"
+    size_gb: 5000
+    conditions: ["Healthy Brain Connectivity"]
+    modality: ["MRI", "fMRI", "dMRI", "MEG"]
+    samples: 1200
+    access: "registration"
+
+  msseg:
+    url: "https://smart-stats-tools.org/lesion-challenge"
+    size_gb: 20
+    conditions: ["Multiple Sclerosis"]
+    modality: "MRI"
+    samples: 100
+
+  isles:
+    url: "https://www.isles-challenge.org"
+    size_gb: 30
+    conditions: ["Ischemic Stroke"]
+    modality: "MRI"
+    samples: 250
+
+  epilepsy_ieeg:
+    url: "https://physionet.org/content/chbmit/"
+    size_gb: 5
+    conditions: ["Epilepsy"]
+    modality: "EEG"
+    samples: 24
+    duration_hours: 983
+
+cardiovascular:
+  mit_bih_arrhythmia:
+    url: "https://physionet.org/content/mitdb/"
+    size_gb: 0.1
+    conditions: ["Arrhythmia", "Atrial Fibrillation", "Ventricular Tachycardia"]
+    modality: "ECG"
+    samples: 48
+    duration_hours: 48
+
+  mimic_waveform:
+    url: "https://physionet.org/content/mimic3wdb/"
+    size_gb: 4000
+    conditions: ["Various cardiac conditions"]
+    modality: ["ECG", "ABP", "PPG"]
+    samples: 67000
+    access: "credentialed"
+
+  ptb_xl:
+    url: "https://physionet.org/content/ptb-xl/"
+    size_gb: 0.5
+    conditions: ["Myocardial Infarction", "Bundle Branch Block", "Arrhythmia"]
+    modality: "ECG"
+    samples: 21837
+
+  afib:
+    url: "https://physionet.org/content/challenge-2017/"
+    size_gb: 1
+    conditions: ["Atrial Fibrillation"]
+    modality: "ECG"
+    samples: 8528
+
+  cinc_challenge:
+    url: "https://physionet.org/content/challenge-2020/"
+    size_gb: 2
+    conditions: ["27 cardiac abnormalities"]
+    modality: "ECG"
+    samples: 43101
+
+  cardiac_mri:
+    url: "https://www.cardiacatlas.org"
+    size_gb: 500
+    conditions: ["Cardiomyopathy", "Heart Failure"]
+    modality: "MRI"
+    samples: 1000
+
+  acdc:
+    url: "https://www.creatis.insa-lyon.fr/Challenge/acdc/"
+    size_gb: 10
+    conditions: ["Cardiac Pathologies"]
+    modality: "MRI"
+    samples: 150
+
+  sunnybrook:
+    url: "http://www.cardiacatlas.org/studies/sunnybrook-cardiac-data/"
+    size_gb: 5
+    conditions: ["Myocardial Infarction"]
+    modality: "MRI"
+    samples: 45
+
+  mesa:
+    url: "https://www.mesa-nhlbi.org"
+    size_gb: 100
+    conditions: ["Atherosclerosis"]
+    modality: ["CT", "MRI"]
+    samples: 6814
+    access: "registration"
+
+cancer:
+  tcga:
+    url: "https://portal.gdc.cancer.gov"
+    size_tb: 2.5
+    cancer_types:
+      [
+        "BRCA",
+        "LUAD",
+        "LUSC",
+        "COAD",
+        "STAD",
+        "BLCA",
+        "LIHC",
+        "CESC",
+        "KIRP",
+        "SARC",
+        "LAML",
+        "ESCA",
+        "PAAD",
+        "PCPG",
+        "READ",
+        "TGCT",
+        "THYM",
+        "KICH",
+        "ACC",
+        "MESO",
+        "UVM",
+        "DLBC",
+        "UCS",
+        "CHOL",
+        "THCA",
+        "HNSC",
+        "KIRC",
+        "GBM",
+        "OV",
+        "SKCM",
+        "UCEC",
+        "PRAD",
+      ]
+    data_types: ["WGS", "WES", "RNA-Seq", "miRNA-Seq", "Methylation"]
+    samples: 11000
+
+  tcia:
+    url: "https://www.cancerimagingarchive.net"
+    size_tb: 0.1
+    cancer_types: ["Breast", "Lung", "Brain", "Prostate", "Colon"]
+    modality: ["CT", "MRI", "PET"]
+    collections: 30
+
+  metabric:
+    url: "https://www.cbioportal.org/study/summary?id=brca_metabric"
+    size_gb: 5
+    cancer_types: ["Breast Cancer"]
+    data_types: ["Gene Expression", "CNV", "Clinical"]
+    samples: 2509
+
+  camelyon:
+    url: "https://camelyon17.grand-challenge.org"
+    size_gb: 1000
+    cancer_types: ["Breast Cancer Metastases"]
+    modality: "Histopathology"
+    samples: 1000
+
+  pcam:
+    url: "https://github.com/basveeling/pcam"
+    size_gb: 7
+    cancer_types: ["Breast Cancer"]
+    modality: "Histopathology"
+    samples: 327680
+
+  breakhis:
+    url: "https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/"
+    size_gb: 3
+    cancer_types: ["Breast Cancer"]
+    modality: "Histopathology"
+    samples: 7909
+
+  lgg_1p19q:
+    url: "https://wiki.cancerimagingarchive.net/display/Public/LGG-1p19qDeletion"
+    size_gb: 50
+    cancer_types: ["Low Grade Glioma"]
+    modality: "MRI"
+    samples: 159
+
+  nsclc_radiomics:
+    url: "https://wiki.cancerimagingarchive.net/display/Public/NSCLC-Radiomics"
+    size_gb: 30
+    cancer_types: ["Non-Small Cell Lung Cancer"]
+    modality: "CT"
+    samples: 422
+
+  prostate_mri:
+    url: "https://wiki.cancerimagingarchive.net/display/Public/PROSTATE-MRI"
+    size_gb: 100
+    cancer_types: ["Prostate Cancer"]
+    modality: "MRI"
+    samples: 204
+
+  colorectal_liver_metastases:
+    url: "https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=89096588"
+    size_gb: 200
+    cancer_types: ["Colorectal Cancer"]
+    modality: ["CT", "MRI"]
+    samples: 197
+
+dermatology:
+  ham10000:
+    url: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T"
+    size_gb: 10
+    conditions:
+      [
+        "Melanoma",
+        "Melanocytic Nevus",
+        "Basal Cell Carcinoma",
+        "Actinic Keratosis",
+        "Benign Keratosis",
+        "Dermatofibroma",
+        "Vascular Lesion",
+      ]
+    modality: "Dermoscopy"
+    samples: 10015
+
+  isic:
+    url: "https://www.isic-archive.com"
+    size_gb: 100
+    conditions: ["Melanoma", "Nevus", "Seborrheic Keratosis"]
+    modality: "Dermoscopy"
+    samples: 50000
+
+  fitzpatrick17k:
+    url: "https://github.com/mattgroh/fitzpatrick17k"
+    size_gb: 5
+    conditions: ["Various skin conditions"]
+    skin_types: ["I", "II", "III", "IV", "V", "VI"]
+    samples: 16577
+
+infectious:
+  covidx:
+    url: "https://github.com/lindawangg/COVID-Net"
+    size_gb: 5
+    conditions: ["COVID-19"]
+    modality: ["X-ray", "CT"]
+    samples: 30000
+
+  tuberculosis:
+    url: "https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset"
+    size_gb: 2
+    conditions: ["Tuberculosis"]
+    modality: "X-ray"
+    samples: 4200
+
+  malaria:
+    url: "https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria"
+    size_gb: 1
+    conditions: ["Malaria"]
+    modality: "Microscopy"
+    samples: 27558
+
+diabetes:
+  pima_diabetes:
+    url: "https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database"
+    size_mb: 1
+    conditions: ["Diabetes"]
+    data_type: "Clinical"
+    samples: 768
+
+  diabetic_retinopathy:
+    url: "https://www.kaggle.com/c/diabetic-retinopathy-detection"
+    size_gb: 88
+    conditions: ["Diabetic Retinopathy"]
+    modality: "Fundus Photography"
+    samples: 88702
+
+general:
+  mimic_iv:
+    url: "https://physionet.org/content/mimiciv/"
+    size_gb: 10000
+    conditions: ["Multi-disease ICU data"]
+    data_types: ["Vitals", "Labs", "Medications", "Notes", "Diagnoses"]
+    samples: 73000
+    access: "credentialed"
+
+  disease_symptom_gts:
+    url: "https://gts.ai/datasets"
+    size_mb: 50
+    conditions: 400
+    data_type: "Symptoms and Treatments"
+    format: "Structured"
+
+orthopedic:
+  mura:
+    url: "https://stanfordmlgroup.github.io/competitions/mura/"
+    size_gb: 40
+    conditions: ["Bone Fractures", "Abnormalities"]
+    modality: "X-ray"
+    samples: 40561
+    body_parts:
+      ["Elbow", "Finger", "Forearm", "Hand", "Humerus", "Shoulder", "Wrist"]
+
+  rsna_bone_age:
+    url: "https://www.kaggle.com/c/rsna-bone-age"
+    size_gb: 10
+    conditions: ["Bone Age Assessment"]
+    modality: "X-ray"
+    samples: 14236
+
+  oai:
+    url: "https://nda.nih.gov/oai/"
+    size_gb: 5000
+    conditions: ["Osteoarthritis"]
+    modality: ["X-ray", "MRI"]
+    samples: 4796
+    access: "registration"
+
+  spineweb:
+    url: "http://spineweb.digitalimaginggroup.ca"
+    size_gb: 50
+    conditions: ["Spine Pathologies"]
+    modality: ["X-ray", "CT", "MRI"]
+    samples: 1000
+
+ophthalmology:
+  messidor:
+    url: "https://www.adcis.net/en/third-party/messidor/"
+    size_gb: 2
+    conditions: ["Diabetic Retinopathy"]
+    modality: "Fundus Photography"
+    samples: 1200
+
+  eyepacs:
+    url: "https://www.kaggle.com/c/diabetic-retinopathy-detection"
+    size_gb: 88
+    conditions: ["Diabetic Retinopathy"]
+    modality: "Fundus Photography"
+    samples: 88702
+
+  oct_retinal:
+    url: "https://www.kaggle.com/datasets/paultimothymooney/kermany2018"
+    size_gb: 5
+    conditions:
+      ["Choroidal Neovascularization", "Diabetic Macular Edema", "Drusen"]
+    modality: "OCT"
+    samples: 84495
+
+  refuge:
+    url: "https://refuge.grand-challenge.org"
+    size_gb: 3
+    conditions: ["Glaucoma"]
+    modality: "Fundus Photography"
+    samples: 1200
+
+  drishti_gs:
+    url: "http://cvit.iiit.ac.in/projects/mip/drishti-gs/mip-dataset2/Home.php"
+    size_gb: 1
+    conditions: ["Glaucoma"]
+    modality: "Fundus Photography"
+    samples: 101
+
+kidney:
+  kits:
+    url: "https://kits21.grand-challenge.org"
+    size_gb: 100
+    conditions: ["Kidney Tumors"]
+    modality: "CT"
+    samples: 300
+
+  tcga_kirc:
+    url: "https://portal.gdc.cancer.gov"
+    size_gb: 200
+    conditions: ["Kidney Renal Clear Cell Carcinoma"]
+    data_types: ["WGS", "RNA-Seq", "Imaging"]
+    samples: 537
+
+  chaos:
+    url: "https://chaos.grand-challenge.org"
+    size_gb: 20
+    conditions: ["Liver and Kidney Segmentation"]
+    modality: ["CT", "MRI"]
+    samples: 40
+
+liver:
+  lits:
+    url: "https://competitions.codalab.org/competitions/17094"
+    size_gb: 100
+    conditions: ["Liver Tumors"]
+    modality: "CT"
+    samples: 201
+
+  tcga_lihc:
+    url: "https://portal.gdc.cancer.gov"
+    size_gb: 150
+    conditions: ["Liver Hepatocellular Carcinoma"]
+    data_types: ["WGS", "RNA-Seq"]
+    samples: 377
+
+pathology:
+  camelyon16:
+    url: "https://camelyon16.grand-challenge.org"
+    size_gb: 700
+    conditions: ["Breast Cancer Metastases"]
+    modality: "Histopathology"
+    samples: 400
+
+  pannuke:
+    url: "https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke"
+    size_gb: 10
+    conditions: ["Nuclei Segmentation"]
+    modality: "Histopathology"
+    samples: 7901
+
+  lizard:
+    url: "https://warwick.ac.uk/fac/cross_fac/tia/data/lizard"
+    size_gb: 5
+    conditions: ["Colon Cancer"]
+    modality: "Histopathology"
+    samples: 238
+
+  tcga_brca_slides:
+    url: "https://portal.gdc.cancer.gov"
+    size_gb: 2000
+    conditions: ["Breast Cancer"]
+    modality: "Histopathology"
+    samples: 1133
+
+pediatric:
+  rsna_pediatric_bone_age:
+    url: "https://www.kaggle.com/c/rsna-bone-age"
+    size_gb: 10
+    conditions: ["Bone Age"]
+    modality: "X-ray"
+    samples: 14236
+
+  chop_chd:
+    url: "https://www.kaggle.com/datasets/xiaoweixumedicalai/imagechd"
+    size_gb: 5
+    conditions: ["Congenital Heart Disease"]
+    modality: "Ultrasound"
+    samples: 1100
+
+mental_health:
+  fbirn:
+    url: "http://fcon_1000.projects.nitrc.org/indi/retro/fbirn.html"
+    size_gb: 50
+    conditions: ["Schizophrenia"]
+    modality: ["MRI", "fMRI"]
+    samples: 311
+
+  cobre:
+    url: "http://fcon_1000.projects.nitrc.org/indi/retro/cobre.html"
+    size_gb: 30
+    conditions: ["Schizophrenia"]
+    modality: ["MRI", "fMRI"]
+    samples: 146
+
+  bsnip:
+    url: "http://b-snip.org"
+    size_gb: 100
+    conditions: ["Psychosis Spectrum"]
+    modality: ["MRI", "EEG", "Clinical"]
+    samples: 2000
+    access: "credentialed"
