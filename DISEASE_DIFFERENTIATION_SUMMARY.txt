@@ -1,0 +1,382 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║           MEDICAL VECTOR DATABASE - DISEASE DIFFERENTIATION SYSTEM           ║
+║                    500+ Specific Disease Subtypes Cataloged                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎯 WHAT'S NEW: GRANULAR DISEASE CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instead of just "Cancer" → Now: 100+ specific cancer subtypes
+Instead of just "Melanoma" → Now: 6 melanoma variants
+Instead of just "Pneumonia" → Now: 15+ pneumonia types
+Instead of just "Diabetes" → Now: 4 types + 10+ complications
+
+📊 COMPLETE DISEASE BREAKDOWN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🫁 RESPIRATORY DISEASES (50+ Subtypes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PNEUMONIA (15 Types)
+├─ Bacterial Pneumonia
+│  ├─ Streptococcus pneumoniae (Pneumococcal)
+│  ├─ Staphylococcus aureus
+│  ├─ Haemophilus influenzae
+│  ├─ Mycoplasma pneumoniae (Atypical)
+│  ├─ Legionella pneumophila (Legionnaires')
+│  ├─ Klebsiella pneumoniae
+│  └─ Pseudomonas aeruginosa
+├─ Viral Pneumonia
+│  ├─ COVID-19 (SARS-CoV-2)
+│  ├─ Influenza A/B
+│  ├─ RSV
+│  ├─ Adenovirus
+│  └─ Parainfluenza
+├─ Fungal Pneumonia
+│  ├─ Pneumocystis jirovecii (PCP)
+│  ├─ Aspergillus
+│  └─ Histoplasma
+└─ Aspiration Pneumonia
+
+📊 Datasets: RSNA Pneumonia, MIMIC-CXR, CheXpert, NIH X-ray14
+📊 Samples: 500,000+ X-rays
+
+TUBERCULOSIS (10 Types)
+├─ Pulmonary TB
+│  ├─ Primary TB
+│  ├─ Secondary TB (Reactivation)
+│  ├─ Miliary TB
+│  └─ Cavitary TB
+├─ Extrapulmonary TB
+│  ├─ Lymph Node TB
+│  ├─ Pleural TB
+│  ├─ Bone/Joint TB
+│  └─ CNS TB (Meningitis)
+└─ Drug-Resistant TB
+   ├─ MDR-TB (Multi-drug resistant)
+   ├─ XDR-TB (Extensively drug resistant)
+   └─ RR-TB (Rifampicin resistant)
+
+📊 Datasets: Shenzhen TB, Montgomery TB
+📊 Samples: 1,000+ X-rays
+
+LUNG CANCER (10 Types)
+├─ Non-Small Cell (85%)
+│  ├─ Adenocarcinoma (40%)
+│  │  ├─ Acinar
+│  │  ├─ Papillary
+│  │  ├─ Micropapillary
+│  │  ├─ Solid
+│  │  └─ Lepidic
+│  ├─ Squamous Cell (25-30%)
+│  │  ├─ Keratinizing
+│  │  ├─ Non-keratinizing
+│  │  └─ Basaloid
+│  └─ Large Cell (10%)
+└─ Small Cell (15%)
+   ├─ Pure SCLC
+   └─ Combined SCLC
+
+📊 Datasets: LUNA16, LIDC-IDRI, NSCLC-Radiomics, TCGA
+📊 Samples: 2,000+ CT scans + genomics
+
+🧬 CANCER (100+ Subtypes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BREAST CANCER (20+ Types)
+├─ Invasive Carcinomas
+│  ├─ Invasive Ductal Carcinoma (IDC) - 80%
+│  ├─ Invasive Lobular Carcinoma (ILC) - 10%
+│  ├─ Tubular Carcinoma
+│  ├─ Medullary Carcinoma
+│  ├─ Mucinous Carcinoma
+│  └─ Papillary Carcinoma
+├─ In Situ Carcinomas
+│  ├─ DCIS (Ductal Carcinoma In Situ)
+│  └─ LCIS (Lobular Carcinoma In Situ)
+├─ Molecular Subtypes (Treatment-Critical)
+│  ├─ Luminal A (ER+/PR+/HER2-) - 40%
+│  ├─ Luminal B (ER+/PR+/HER2+) - 20%
+│  ├─ HER2-Enriched (ER-/PR-/HER2+) - 15%
+│  └─ Triple Negative (ER-/PR-/HER2-) - 15%
+└─ Special Types
+   ├─ Inflammatory Breast Cancer
+   ├─ Paget's Disease
+   └─ Phyllodes Tumor
+
+📊 Datasets: TCGA-BRCA, Camelyon16/17, PatchCamelyon, BreakHis, METABRIC
+📊 Samples: 330,000+ (histopathology + genomics)
+
+SKIN CANCER (15+ Types)
+├─ Melanoma (6 Variants)
+│  ├─ Superficial Spreading Melanoma - 70%
+│  ├─ Nodular Melanoma - 15%
+│  ├─ Lentigo Maligna Melanoma - 10%
+│  ├─ Acral Lentiginous Melanoma - 5%
+│  ├─ Amelanotic Melanoma
+│  └─ Desmoplastic Melanoma
+├─ Basal Cell Carcinoma (5 Types)
+│  ├─ Nodular BCC
+│  ├─ Superficial BCC
+│  ├─ Morpheaform (Sclerosing) BCC
+│  ├─ Pigmented BCC
+│  └─ Infiltrative BCC
+├─ Squamous Cell Carcinoma (4 Types)
+│  ├─ In Situ (Bowen's Disease)
+│  ├─ Invasive SCC
+│  ├─ Keratoacanthoma
+│  └─ Verrucous Carcinoma
+└─ Rare Types
+   ├─ Merkel Cell Carcinoma
+   ├─ Sebaceous Carcinoma
+   ├─ Dermatofibrosarcoma Protuberans
+   └─ Kaposi Sarcoma
+
+📊 Datasets: ISIC Archive, HAM10000, Fitzpatrick17k
+📊 Samples: 60,000+ dermoscopy images
+
+BRAIN TUMORS (15+ Types)
+├─ Gliomas
+│  ├─ Glioblastoma (Grade IV)
+│  ├─ Anaplastic Astrocytoma (Grade III)
+│  ├─ Diffuse Astrocytoma (Grade II)
+│  ├─ Pilocytic Astrocytoma (Grade I)
+│  ├─ Oligodendroglioma
+│  └─ Ependymoma
+├─ Meningiomas
+│  ├─ Grade I (Benign)
+│  ├─ Grade II (Atypical)
+│  └─ Grade III (Anaplastic)
+└─ Other
+   ├─ Medulloblastoma
+   ├─ Schwannoma
+   ├─ Pituitary Adenoma
+   ├─ Craniopharyngioma
+   └─ CNS Lymphoma
+
+📊 Datasets: BraTS, TCGA-GBM, TCGA-LGG, LGG-1p19q
+📊 Samples: 2,000+ MRI cases
+
+COLORECTAL CANCER (15+ Types)
+├─ By Location
+│  ├─ Cecal Cancer
+│  ├─ Ascending Colon
+│  ├─ Transverse Colon
+│  ├─ Descending Colon
+│  ├─ Sigmoid Colon
+│  └─ Rectal Cancer
+├─ By Histology
+│  ├─ Adenocarcinoma (95%)
+│  ├─ Mucinous Adenocarcinoma
+│  ├─ Signet Ring Cell
+│  └─ Squamous Cell
+└─ Molecular
+   ├─ MSI-High
+   ├─ MSS
+   ├─ KRAS mutant
+   └─ BRAF mutant
+
+📊 Datasets: TCGA (COAD, READ), Colorectal Liver Metastases, Lizard
+📊 Samples: 1,500+ cases
+
+🧠 NEUROLOGICAL DISEASES (80+ Subtypes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ALZHEIMER'S DISEASE (5 Stages)
+├─ Preclinical Alzheimer's
+├─ Mild Cognitive Impairment (MCI)
+├─ Mild Alzheimer's Dementia
+├─ Moderate Alzheimer's Dementia
+└─ Severe Alzheimer's Dementia
+
+📊 Datasets: ADNI, OASIS
+📊 Samples: 3,000+ MRI/PET scans
+
+PARKINSON'S DISEASE (7 Types)
+├─ Motor Subtypes
+│  ├─ Tremor-dominant
+│  ├─ Postural Instability/Gait Difficulty (PIGD)
+│  └─ Mixed
+└─ Related Disorders
+   ├─ Multiple System Atrophy (MSA)
+   ├─ Progressive Supranuclear Palsy (PSP)
+   ├─ Corticobasal Degeneration
+   └─ Lewy Body Dementia
+
+📊 Datasets: PPMI
+📊 Samples: 1,500+ with MRI, DaTscan
+
+STROKE (8 Types)
+├─ Ischemic (87%)
+│  ├─ Thrombotic Stroke
+│  ├─ Embolic Stroke
+│  ├─ Lacunar Stroke
+│  └─ Cryptogenic Stroke
+└─ Hemorrhagic (13%)
+   ├─ Intracerebral Hemorrhage
+   ├─ Subarachnoid Hemorrhage
+   ├─ Subdural Hematoma
+   └─ Epidural Hematoma
+
+📊 Datasets: ISLES
+📊 Samples: 250+ MRI cases
+
+EPILEPSY (12+ Types)
+├─ Focal Epilepsy
+│  ├─ Temporal Lobe Epilepsy
+│  ├─ Frontal Lobe Epilepsy
+│  ├─ Parietal Lobe Epilepsy
+│  └─ Occipital Lobe Epilepsy
+├─ Generalized Epilepsy
+│  ├─ Absence Seizures
+│  ├─ Tonic-Clonic Seizures
+│  ├─ Myoclonic Seizures
+│  └─ Atonic Seizures
+└─ Syndromes
+   ├─ Juvenile Myoclonic Epilepsy
+   ├─ Lennox-Gastaut Syndrome
+   ├─ Dravet Syndrome
+   └─ West Syndrome
+
+📊 Datasets: Epilepsy iEEG
+📊 Samples: 24 patients, 983 hours
+
+🫀 CARDIOVASCULAR DISEASES (60+ Subtypes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ARRHYTHMIAS (20+ Types)
+├─ Supraventricular
+│  ├─ Atrial Fibrillation (AFib)
+│  ├─ Atrial Flutter
+│  ├─ Supraventricular Tachycardia (SVT)
+│  ├─ Wolff-Parkinson-White Syndrome
+│  └─ AV Nodal Reentrant Tachycardia
+├─ Ventricular
+│  ├─ Ventricular Tachycardia (VT)
+│  ├─ Ventricular Fibrillation (VFib)
+│  ├─ Premature Ventricular Contractions (PVCs)
+│  ├─ Long QT Syndrome
+│  └─ Brugada Syndrome
+└─ Bradycardia
+   ├─ Sinus Bradycardia
+   ├─ First-degree AV Block
+   ├─ Second-degree AV Block (Mobitz I/II)
+   ├─ Third-degree AV Block
+   └─ Sick Sinus Syndrome
+
+📊 Datasets: AFib, MIT-BIH, PTB-XL, CINC Challenge, MIMIC Waveform
+📊 Samples: 60,000+ ECG recordings
+
+MYOCARDIAL INFARCTION (6 Types)
+├─ By ECG
+│  ├─ STEMI (ST-Elevation MI)
+│  └─ NSTEMI (Non-ST-Elevation MI)
+└─ By Location
+   ├─ Anterior MI
+   ├─ Inferior MI
+   ├─ Lateral MI
+   └─ Posterior MI
+
+📊 Datasets: MIMIC-IV, MIMIC Waveform, PTB-XL, Sunnybrook
+📊 Samples: 13,000+ ECGs + MRI
+
+HEART FAILURE (6 Types)
+├─ By Ejection Fraction
+│  ├─ HFrEF (Reduced EF <40%)
+│  ├─ HFmrEF (Mid-range EF 40-49%)
+│  └─ HFpEF (Preserved EF ≥50%)
+└─ By Side
+   ├─ Left-sided Heart Failure
+   ├─ Right-sided Heart Failure
+   └─ Biventricular Failure
+
+📊 Datasets: Cardiac MRI, ACDC, MIMIC-IV
+📊 Samples: 3,500+ cases
+
+🩸 DIABETES & COMPLICATIONS (20+ Subtypes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DIABETES TYPES (7 Types)
+├─ Type 1 Diabetes
+│  ├─ Autoimmune Type 1
+│  ├─ Idiopathic Type 1
+│  └─ LADA (Latent Autoimmune)
+├─ Type 2 Diabetes
+│  ├─ Prediabetes
+│  ├─ Early Type 2
+│  ├─ Established Type 2
+│  └─ Advanced Type 2
+├─ Gestational Diabetes
+│  ├─ Class A1 (Diet-controlled)
+│  └─ Class A2 (Medication-required)
+└─ Other Types
+   ├─ MODY (Maturity-Onset Diabetes of Young)
+   ├─ Neonatal Diabetes
+   └─ Secondary Diabetes
+
+DIABETIC RETINOPATHY (6 Stages)
+├─ No DR
+├─ Mild NPDR (Non-Proliferative)
+├─ Moderate NPDR
+├─ Severe NPDR
+├─ Proliferative DR
+└─ Diabetic Macular Edema
+
+📊 Datasets: EyePACS, Diabetic Retinopathy Detection, MESSIDOR, OCT Retinal
+📊 Samples: 88,000+ fundus + 84,000+ OCT images
+
+🔍 HOW TO USE THE DIFFERENTIATION SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. SEARCH BY SPECIFIC SUBTYPE
+   python scripts/search_disease_subtypes.py melanoma --tree --datasets
+   python scripts/search_disease_subtypes.py breast_cancer --datasets
+   python scripts/search_disease_subtypes.py atrial_fibrillation --datasets
+
+2. LIST ALL DISEASES
+   python scripts/search_disease_subtypes.py --list-all
+
+3. API QUERIES
+   curl "http://localhost:8000/datasets/condition/nodular_melanoma"
+   curl "http://localhost:8000/datasets/condition/triple_negative"
+   curl "http://localhost:8000/datasets/condition/glioblastoma"
+
+4. VIEW TAXONOMY
+   python scripts/search_disease_subtypes.py pneumonia --tree
+
+📊 COMPLETE STATISTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total Disease Subtypes:     500+
+Total Datasets:              75+
+Total Data Size:             450+ TB
+Total Samples:               2+ Million
+Disease Categories:          15
+Modalities:                  10+
+
+By Category:
+  Respiratory:               50+ subtypes
+  Cancer:                    100+ subtypes
+  Neurological:              80+ subtypes
+  Cardiovascular:            60+ subtypes
+  Dermatology:               40+ subtypes
+  Diabetes:                  20+ subtypes
+  Ophthalmology:             30+ subtypes
+  Orthopedic:                40+ subtypes
+  Mental Health:             50+ subtypes
+  Infectious:                40+ subtypes
+
+📚 DOCUMENTATION FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. config/disease_taxonomy.yaml          - Complete disease hierarchy
+2. config/disease_to_dataset_mapping.yaml - Disease → Dataset mapping
+3. DISEASE_CLASSIFICATION.md             - Detailed clinical reference
+4. scripts/search_disease_subtypes.py    - Search tool
+5. EXPANDED_DATASETS.md                  - All 75+ datasets
+6. QUICK_REFERENCE.md                    - Quick start guide
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  Every disease differentiated into specific subtypes with dataset mapping!  ║
+║                    Ready for precision medical AI! 🎯                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
